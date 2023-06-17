@@ -1,0 +1,355 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@700&display=swap');
+
+:root {
+    --primary: #0d6efd;
+    --dark: #21252f;
+    --body: #888;
+    --one: #686464;
+    --two: #4C837D;
+    --three: #DAC2AA;
+    --four: #EFEEE9;
+    --five: #FFFFFF;
+    --six: #E59552;
+    --text: #686464;
+    --box-shadow: 0 8px 22px rgba(0,0,0,0.1);
+}
+
+body {
+    font-family: Josefin Sans, "sans-serif";
+    line-height: 1.7;
+    color: var(--text);
+}
+
+h1,h2,h3,h4,h5,h6 {
+    color: var(--text);
+    font-weight: 700;
+}
+
+.display-4 {
+    color: var(--one);
+    font-weight: 700;
+}
+
+a, a:hover {
+    color: var(--text);
+    text-decoration: none;
+}
+
+.navbar {
+    box-shadow: var(--box-shadow);
+}
+
+.logo {
+    width: 120px;
+}
+
+.navbar .nav-link {
+    font-size: 14px;
+    font-weight: 700;
+}
+
+.btn {
+    padding: 10px 10px;
+    border-width: 2px;
+    border-radius: 10;
+
+}
+
+.hero {
+    background-image: url("asset/banner.png");
+    background-position: center;
+    background-size: cover;
+    background-attachment: local;
+    position: relative;
+    z-index: 2;
+}
+
+.hero::after {
+    content: "";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: rgba(0,0,0,0.0);
+    z-index: -1;
+}
+
+section {
+    padding-top: 120px;
+    padding-bottom: 120px;
+}
+
+.card-effect {
+    box-shadow: var(--box-shadow);
+    background-color: #fff;
+    padding: 25px;
+    transition: all 0.35s ease;
+}
+
+.card-effect:hover {
+    box-shadow: none;
+    transform: translateY(5px);
+}
+
+.iconbox {
+    width: 54px;
+    height: 54px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--one);
+    color: #fff;
+    font-size: 32px;
+    border-radius: 100px;
+    flex: none;
+}
+
+.about {
+    position: relative;
+    z-index: 2;
+    overflow: hidden;
+}
+
+.about::after {
+    content: '';
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: -100%;
+    left: 0;
+    background-color: var(--one);
+    z-index: -1;
+    opacity: 0;
+    transition: all 0.4s ease;
+}
+
+.about:hover .iconbox {
+    background-color: #fff;
+    color: var(--one);
+}
+
+.about:hover h5,
+.about:hover p {
+    color: #fff;
+}
+
+.about:hover::after {
+    opacity: 1;
+    top: 0;
+}
+
+.col-img {
+    background-image: url("asset/grad-pic.jpg");
+    background-position: center;
+    background-size: cover;
+    min-height: 500px;
+}
+
+.footer-top {
+    padding-top: 90px;
+    padding: 90px;
+    background-color: var(--four);
+}
+
+.footer-top a {
+    color: var(--two);
+}
+
+.footer-top a:hover {
+    color: #fff;
+}
+
+.footer-bottom {
+    background-color: var(--one);
+}
+
+.btn-warning {
+    background-color: #C38370;
+    border-color: #C38370;
+}
+
+.btn-warning:hover {
+  background-color: #DAC2AA;
+  border-color: #DAC2AA;
+}
+
+.graphics {
+    position: relative;
+    overflow: hidden;
+    padding: 20px;
+  }
+  
+  .graphics-container {
+    padding: 0 0vw;
+    display: flex;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+  }
+  
+  .graphics-container::-webkit-scrollbar {
+    display: none;
+  }
+  
+  .graphics-card {
+    flex: 0 0 auto;
+    width: 250px;
+    height: 450px;
+    margin-right: 40px;
+  }
+  
+  .graphics-image {
+    position: relative;
+    width: 110%;
+    height: 412px;
+    overflow: hidden;
+  }
+  
+  .graphics-thumb {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  .pre-btn,
+  .nxt-btn {
+    border: none;
+    width: 10vw;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, #fff 100%);
+    cursor: pointer;
+    z-index: 8;
+  }
+  
+  .pre-btn {
+    left: 0;
+    transform: rotate(180deg);
+  }
+  
+  .nxt-btn {
+    right: 0;
+  }
+  
+  .pre-btn img,
+  .nxt-btn img {
+    opacity: 0.2;
+  }
+  
+  .pre-btn:hover img,
+  .nxt-btn:hover img {
+    opacity: 1;
+  }
+
+  .carousel-container {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding-bottom: 50px;
+  }
+
+  .carousel-item {
+    height: 32rem;
+    background: #777;
+    color: white;
+    position: relative;
+    background-position: center;
+    background-size: cover;
+  }
+
+  .works {
+    position: relative;
+    overflow: hidden;
+    padding: 20px;
+  }
+  
+  .works-category {
+    padding: 0 10vw;
+    font-size: 30px;
+    font-weight: 500;
+    margin-bottom: 40px;
+    text-transform: capitalize;
+  }
+  
+  .works-container {
+    padding: 0 10vw;
+    display: flex;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+  }
+  
+  .works-container::-webkit-scrollbar {
+    display: none;
+  }
+  
+  .works-card {
+    flex: 0 0 auto;
+    width: 250px;
+    height: 450px;
+    margin-right: 40px;
+  }
+  
+  .works-image {
+    position: relative;
+    width: 100%;
+    height: 350px;
+    overflow: hidden;
+  }
+  
+  .works-thumb {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  .card-btn {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 10px;
+    width: 90%;
+    text-transform: capitalize;
+    border: none;
+    outline: none;
+    background: #DAC2AA;
+    border-radius: 5px;
+    transition: 0.5s;
+    cursor: pointer;
+    opacity: 0;
+    color: #fff;
+  }
+  
+  .works-card:hover .card-btn {
+    opacity: 1;
+  }
+  
+  .card-btn:hover {
+    background: #C38370;
+    color: #fff;
+  }
+  
+  .works-info {
+    width: 100%;
+    height: 100px;
+    padding-top: 10px;
+  }
+  
+  .works-title {
+    text-transform: uppercase;
+  }
+  
+  .works-short-description {
+    width: 100%;
+    height: 20px;
+    line-height: 20px;
+    overflow: hidden;
+    opacity: 0.5;
+    text-transform: capitalize;
+    margin: 5px 0;
+  }
